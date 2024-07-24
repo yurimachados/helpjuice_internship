@@ -3,24 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Front-end developer test project">
     <title>Front-end developer test project</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/scrollbar.css">
 </head>
 <body>
-    <div id="app">
+    <div id="app ">
         <header>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+            <nav class="">
+                <ul class="path-menu">
+                    <img src="assets/svg/Expand_right_double.svg" alt="logo">
+                    <img src="assets/svg/Book_open_light.svg">
+                    <li><a href="#">Main</a></li>
+                    <p>/</p>
+                    <li><a href="#">Getting started</a></li>
+                    <p>/</p>
+                    <li><a href="#">Front-end developer test project</a></li>
+                </ul>
+                <ul class="options-menu">
+                    <li>
+                        <a href="#">
+                            <img src="assets/svg/unlock.svg">
+                            Editing
+                        </a>
+                    </li>
+                    <p>|</p>
+                    <li>
+                        <a href="#">
+                            Publish Space
+                            <img src="assets/svg/expand-down.svg">
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </header>
-        <h1>teste</h1>
-
+        <div class="content ">
+            <div class="content-header">
+                <div>
+                    <span>P</span>
+                    <p>|</p>
+                    <img src="assets/svg/clock.svg" alt="clock">
+                    <p> 0min</p>
+                    <p>|</p>
+                    <img src="assets/img/bunny.png" class="user-icon" alt="bunny">
+                    <p>|</p>
+                    <img src="assets/svg/arrow-down-left.svg" alt="arrow-down-left">
+                    <p>0</p>
+                </div>
+                <div>
+                    <img src="assets/svg/done-ring.svg" alt="done-ring">
+                    <img src="assets/svg/cloud.svg" alt="cloud">
+                    <img src="assets/svg/dots.svg" alt="dots">
+                </div>
+            </div>
+            <div class="content-title"> 
+                <h1>Front-end developer test project</h1>
+            </div>
+            <hr>
+            <div class="content-body">
+                <p>
+                    Your goal is to make a page that looks exactaly like this one, 
+                    and has de ability to create H1 text simply by typing / then 
+                    typing text, and hitting enter.
+                </p>
+                <div class="content-body-editable"  contenteditable="true">
+                    <h1>This is my header</h1>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="help-button">
+            <img src="assets/svg/help.svg" alt="plus">
+        </a>
     </div>
-    <script src="scripts/script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
