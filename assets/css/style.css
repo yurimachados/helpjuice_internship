@@ -1,3 +1,6 @@
+*{
+    margin: 0;
+}
 body{
     font-family: 'Inter', sans-serif;
     font-weight: 500;
@@ -18,7 +21,6 @@ body{
     /* border: 1px solid #000; */
     margin: 10px 0;
     padding: 10px 20%;
-    height: 3000px;
 }
 
 .content-header{
