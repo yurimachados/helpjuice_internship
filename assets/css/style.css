@@ -89,3 +89,7 @@ nav img {
     right: 20px;
 }
 
+.content-body-editable:focus-visible {
+    outline: none; /* Remove o outline quando a div está em foco */
+}
+

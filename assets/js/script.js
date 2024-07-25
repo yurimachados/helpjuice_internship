@@ -6,16 +6,38 @@ const textTypes = {
 
 document.addEventListener('DOMContentLoaded', function () {
     const editableDiv = document.querySelector('.content-body-editable');
-    const optionsMenu = document.querySelector('#options-menu');
+    const optionsMenu = document.getElementById('options-menu');
     const optionsUl = optionsMenu.querySelector('ul');
 
+    editableDiv.addEventListener('focus', function () {
+        editableDiv.classList.add('editing');
+    });
+
+    editableDiv.addEventListener('blur', function () {
+        editableDiv.classList.remove('editing');
+    });
+
+    // Function to show the options menu at the bottom of the line
     const showOptionsMenu = () => {
-        const rect = editableDiv.getBoundingClientRect();
-        optionsMenu.style.display = 'flex';
-        optionsMenu.style.position = 'absolute';
-        optionsMenu.style.left = `${rect.left}px`;
-        optionsMenu.style.top = `${rect.bottom}px`;
-        awaitingNumberInput = true;
+        setTimeout(() => {
+            const selection = window.getSelection();
+            if (selection.rangeCount === 0) return;
+    
+            const range = selection.getRangeAt(0);
+            const rect = range.getBoundingClientRect();
+    
+            const topPosition = rect.bottom + window.scrollY;
+            let leftPosition = rect.left + (rect.width / 2);
+            if (leftPosition < 0) {
+                leftPosition = 0;
+            }
+    
+            optionsMenu.style.left = `${leftPosition}px`;
+            optionsMenu.style.top = `${topPosition}px`;
+            optionsMenu.style.display = 'flex';
+            optionsMenu.style.position = 'absolute';
+            awaitingNumberInput = true;
+        }, 0);
     }
 
     const createNewElement = (textType) => {
@@ -36,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (index >= 0 && index < optionsMenuItems.length) {
             const option = optionsMenuItems[index];
             const textTypeKey = option.querySelector('h4').textContent.trim();
-            if (textTypes[textTypeKey]) { 
+            if (textTypes[textTypeKey]) {
                 createNewElement(textTypeKey);
             } else {
                 console.error('Invalid option selected:', textTypeKey);
@@ -70,12 +92,12 @@ document.addEventListener('DOMContentLoaded', function () {
         optionsUl.appendChild(menuItem);
     });
 
-    
+
     let awaitingNumberInput = false;
     editableDiv.addEventListener('keydown', function (e) {
         if (e.key === '/') {
             if (optionsMenu) {
-                showOptionsMenu();
+                setTimeout(showOptionsMenu, 0);
             }
         } else if (awaitingNumberInput && !isNaN(e.key) && e.key !== ' ') {
             selectNewElementByIndex(parseInt(e.key) - 1);
