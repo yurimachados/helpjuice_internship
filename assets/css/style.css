@@ -6,6 +6,7 @@ body{
     font-weight: 500;
     margin: 0px;
     background-color: #ffffff;
+    color: rgb(31, 31, 31);
 }
 
 .app{
@@ -93,3 +94,37 @@ nav img {
     outline: none; /* Remove o outline quando a div está em foco */
 }
 
+
+
+
+Estilo para o placeholder
+.placeholder {
+    /* position: relative; */
+    color: transparent; /* Torna o texto real transparente */
+}
+
+/* .placeholder::after {
+    content: attr(data-placeholder);
+    color: #aaa; 
+    pointer-events: painted;
+} */
+
+/* .content-text:not(.placeholder) {
+    color: rgb(31, 31, 31); /* Define a cor do texto para o valor inicial */
+/* } */ 
+
+.content-text:not(:empty)::after {
+    content: none;
+    /* color: #aaa; */
+}
+
+.content-text:empty::after {
+    content: attr(data-placeholder);
+    color: #aaa;
+    pointer-events: none
+}
+/* 
+.content-text:has(> br:only-child)::after {
+    content: attr(data-placeholder);
+    color: #aaa;
+} */
