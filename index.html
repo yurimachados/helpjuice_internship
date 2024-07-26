@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/scrollbar.css">
     <link rel="stylesheet" href="assets/css/options-menu.css">
+    <link rel="icon" href="assets/svg/Book_open_light.svg">
 </head>
 <body>
     <div id="app ">
@@ -67,8 +68,13 @@
                     and has de ability to create H1 text simply by typing / then 
                     typing text, and hitting enter.
                 </p>
+                <br>
                 <div class="content-body-editable"  contenteditable="true">
-                    <h1>This is my header</h1>
+                    <div class="content-div">
+                        <p data-id="1" data-placeholder="Type / for blocks, @ to link docs or people" class="content-text placeholder">
+                            <br>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -90,6 +96,8 @@
             <img src="assets/svg/help.svg" alt="plus">
         </a>
     </div>
-    <script src="assets/js/script.js"></script>
+    <!-- <script src="assets/js/script.js" type="module"></script> -->
+    <script type="module" src="assets/js/main.js"></script>
+    <!-- <script src="assets/js/placeholderScript.js"></script> -->
 </body>
 </html>
