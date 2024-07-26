@@ -43,7 +43,7 @@
 }
 
 #options-menu ul {
-    background-color: #F3F4F6;
+    background-color: #FFFFFF;
     list-style-type: none;
     padding: 0;
     margin-top: 10px;
@@ -85,4 +85,8 @@
 
 .selected {
     background-color: #1c4aa5;
+}
+
+.first {
+    background-color: #F3F4F6 !important;
 }

@@ -109,6 +109,10 @@ hr {
     margin-bottom: 20px;
 }
 
+.goal{
+    color: #4D5562;
+    margin-bottom: 60px;
+}
 nav {
     display: flex;
     justify-content: space-between;

@@ -19,6 +19,9 @@ const constructMenuOptions = () => {
     Object.entries(textTypes).forEach(([index, { tag, placeholder, name }]) => {
         const menuItem = document.createElement('li');
         menuItem.classList.add('options-menu-item');
+        if (index === '1') {
+            menuItem.classList.add('first');
+        };
         menuItem.setAttribute('data-tag', tag);
         menuItem.setAttribute('data-placeholder', placeholder);
 
@@ -30,6 +33,8 @@ const constructMenuOptions = () => {
             </div>
         `;
         menuItem.addEventListener('click', () => {
+            menuItems.forEach(item => item.classList.remove('selected'));
+            menuItem.classList.add('selected');
             menuClickFlag = index;
             if (menuClickFlag !== null) {
                 setElementTextType(menuClickFlag, lastElementLocation, lastElementText);
