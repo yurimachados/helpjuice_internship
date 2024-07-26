@@ -19,7 +19,6 @@ body{
     border: 1px dashed red;
 }
 .content{
-    /* border: 1px solid #000; */
     margin: 10px 0;
     padding: 10px 20%;
 }
@@ -55,7 +54,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid #000; */
 }
 
 nav > ul {
@@ -83,7 +81,6 @@ nav img {
     color: #fff;
     padding: 3px 3px 0px 4px;
     border-radius: 5px;
-    /* border: none; */
     cursor: pointer;
     position: fixed;
     bottom: 20px;
@@ -91,40 +88,19 @@ nav img {
 }
 
 .content-body-editable:focus-visible {
-    outline: none; /* Remove o outline quando a div está em foco */
+    outline: none; 
 }
 
-
-
-
-Estilo para o placeholder
 .placeholder {
-    /* position: relative; */
-    color: transparent; /* Torna o texto real transparente */
+    color: transparent;
 }
-
-/* .placeholder::after {
-    content: attr(data-placeholder);
-    color: #aaa; 
-    pointer-events: painted;
-} */
-
-/* .content-text:not(.placeholder) {
-    color: rgb(31, 31, 31); /* Define a cor do texto para o valor inicial */
-/* } */ 
 
 .content-text:not(:empty)::after {
     content: none;
-    /* color: #aaa; */
 }
 
-.content-text:empty::after {
+.content-text.placeholder::after {
     content: attr(data-placeholder);
     color: #aaa;
     pointer-events: none
 }
-/* 
-.content-text:has(> br:only-child)::after {
-    content: attr(data-placeholder);
-    color: #aaa;
-} */
