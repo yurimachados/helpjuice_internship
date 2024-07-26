@@ -33,7 +33,6 @@ const constructMenuOptions = () => {
             </div>
         `;
         menuItem.addEventListener('click', () => {
-            menuItems.forEach(item => item.classList.remove('selected'));
             menuItem.classList.add('selected');
             menuClickFlag = index;
             if (menuClickFlag !== null) {
