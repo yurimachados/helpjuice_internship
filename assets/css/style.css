@@ -90,6 +90,25 @@ body{
     margin-right: 10px;
 }
 
+.content-title{
+    margin-top: 30px;
+    
+}
+
+.content-title h1{
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+hr {
+    color: #E5E7EB;
+    border: none;
+    height: 1px;;
+    background-color: #E5E7EB;
+    margin-bottom: 20px;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
