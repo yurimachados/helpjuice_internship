@@ -23,7 +23,7 @@ For this project, I recreated a functional prototype based on a Figma design pro
 * `observeCommand(event)`: Captures input events and manages commands triggered by user actions.
 * `setElementTextType` : This function changes the type of a text element based on the specified index. It replaces the current element with a new one of the desired type (e.g., `h1`, `h2`, `p`), managing placeholders and text content.
 
-*This setup ensures that the application mimics the behavior and appearance of the Figma prototype, providing a seamless user experience.  More details aboute the application logic can be found in the functions documentation.*
+*This setup ensures that the application mimics the behavior and appearance of the Figma prototype, providing a great user experience.  More details aboute the application logic can be found in the functions documentation.*
 
 ### Deploy
 
