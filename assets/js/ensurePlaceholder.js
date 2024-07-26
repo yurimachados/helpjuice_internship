@@ -4,7 +4,6 @@
  * @export
  */
 export function ensurePlaceholderBehavior(){
-    console.log('ensurePlaceholderBehavior');
     const elements = document.querySelectorAll('.content-text');
 
     if (elements) {
@@ -53,10 +52,8 @@ const checkAndTogglePlaceholder = (element) => {
  * @returns {void}
  */
 const checkBr = (element) => {
-    console.log('checkBr');
     let brs = element.querySelectorAll('br');
     if(brs){
-        console.log('brs', brs);
         brs.forEach((br) => {
             br.remove();
         });

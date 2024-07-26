@@ -26,8 +26,6 @@ const setElementTextType = (textTypeIndex, element, preCommandText) => {
         }
 
         createPlaceholderObserver(newElement);
-        console.log('element', element)
-        console.log('newElement', newElement)
         element.parentNode.replaceChild(newElement, element);
         setTimeout(() => {
             newElement.focus();
