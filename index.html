@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Front-end developer test project</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/scrollbar.css">
@@ -12,28 +15,28 @@
 <body>
     <div id="app ">
         <header>
-            <nav class="">
+            <nav>
                 <ul class="path-menu">
-                    <img src="assets/svg/Expand_right_double.svg" alt="logo">
-                    <img src="assets/svg/Book_open_light.svg">
-                    <li><a href="#">Main</a></li>
+                    <img src="assets/svg/Expand_right_double.svg" id="expand-rigth" alt="logo">
+                    <img src="assets/svg/Book_open_light.svg" id="book-icon">
+                    <li><a href="#" id="main" active >Main</a></li>
                     <p>/</p>
                     <li><a href="#">Getting started</a></li>
                     <p>/</p>
-                    <li><a href="#">Front-end developer test project</a></li>
+                    <li><a href="#">Front-end developer test proje...</a></li>
                 </ul>
                 <ul class="options-menu">
                     <li>
                         <a href="#">
-                            <img src="assets/svg/unlock.svg">
-                            Editing
+                            <img src="assets/svg/unlock.svg" id="unlock">
+                            <p id="editing">Editing</p>
                         </a>
                     </li>
-                    <p>|</p>
+                    <p id="divider">|</p>
                     <li>
                         <a href="#">
-                            Publish Space
-                            <img src="assets/svg/expand-down.svg">
+                            <p id="publish-space">Publish Space</p>
+                            <img src="assets/svg/expand-down.svg" id="expand-down">
                         </a>
                     </li>
                 </ul>
