@@ -5,8 +5,8 @@
     display: none;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
     width: 250px;
+    height: 40%;
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
@@ -43,7 +43,7 @@
 }
 
 #options-menu ul {
-    background-color: #F3F4F6;
+    background-color: #FFFFFF;
     list-style-type: none;
     padding: 0;
     margin-top: 10px;
@@ -85,4 +85,8 @@
 
 .selected {
     background-color: #1c4aa5;
+}
+
+.first {
+    background-color: #F3F4F6 !important;
 }
