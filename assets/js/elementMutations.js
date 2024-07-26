@@ -1,29 +1,16 @@
 
 import { hideOptionsMenu } from "./menuConstruct.js";
 import textTypes from "./textTypes.js";
-
-const selectNewElementByIndex = (index) => {
-    // console.log('Selecting new element by index:', index);
-    let optionsMenuItems = document.querySelectorAll('.options-menu-item');
-    if (index >= 0 && index <= optionsMenuItems.length) {
-        createNewElement(index, preCommandText);
-        hideOptionsMenu();
-    } else {
-        hideOptionsMenu();
-    }
-}
+import { createPlaceholderObserver } from "./ensurePlaceholder.js";
 
 /**
- * Function to create a new element in the editable div
- * 
- * @param {string} textType - The type of text to create
- * 
+ * Function to set the text type of an element based on the index of the text type
+ * @param {number} textTypeIndex - The index of the text type
+ * @param {HTMLElement} element - The element to set the text type on
+ * @param {string} preCommandText - The text before the command
  * @returns {void}
- * 
- * todo: verify if the selection is inside a div, if not, create a new div
  */
 const setElementTextType = (textTypeIndex, element, preCommandText) => {
-    // console.log('Creating new element:', index);
     const textType = textTypes[textTypeIndex];
 
     if (textType) {
@@ -38,28 +25,28 @@ const setElementTextType = (textTypeIndex, element, preCommandText) => {
             newElement.textContent = text;
         }
 
+        createPlaceholderObserver(newElement);
+        console.log('element', element)
+        console.log('newElement', newElement)
         element.parentNode.replaceChild(newElement, element);
-        newElement.focus();
-        hideOptionsMenu()
-        // let tag = textType.tag;
-        // let placeholder = textType.placeholder;
-        
-        // // console.log(text)
-
-        // let contentDiv = document.getElementsByClassName('command-active')[0];
-        // contentDiv.classList.add('content-div');
-        // // let newElement = document.createElement(tag);
-
-        // contentDiv.textContent = '';
-        // contentDiv.appendChild(newElement);
-        
+        setTimeout(() => {
+            newElement.focus();
+            const range = document.createRange();
+            const sel = window.getSelection();
+            range.setStart(newElement, 0);
+            range.collapse(true);
+            sel.removeAllRanges();
+            sel.addRange(range);
+        }, 0);
+        hideOptionsMenu();        
     } else {
         console.error('Invalid text type:', textType);
+        hideOptionsMenu();
     }
 }
 
+// Function to check if the text is empty
 const checkText = (text) => {
-
     if(text.trim() === '') {
         return false;
     } else {
@@ -67,4 +54,4 @@ const checkText = (text) => {
     }
 }
 
-export { selectNewElementByIndex, setElementTextType };
+export { setElementTextType };
