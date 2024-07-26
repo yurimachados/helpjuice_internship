@@ -28,28 +28,68 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
-    border: #ECEDEF 1px solid;
+    border: #E5E7EB 1px solid;
     border-radius: 10px ;
+    height: 40px;
+    margin-top: 10px;
 }
 
 .content-header div{
     display: flex;
     align-items: center;
-
 }
 
 .content-header span{
     color:#458367;
     border-radius: 5px;
-    padding: 5px 8px;
-    background-color: #D9F9E6;
+    padding: 10px 10px;
+    background-color: #D9F9E6;    
+    font-size: 19px;
+    font-weight: 600;    
+    margin-right: 12px;
+}
+
+.content-header p {
+    color: #DEE0E4;
+}
+
+.content-header p.time-count{
+    color: #9DA3AE;
+    margin-right: 13px;
+}
+
+.clock{
+    margin-left:8px;
+    margin-right: 4px;
 }
 .user-icon{
     width: 27px;
     height: 27px;
     border-radius: 50%;
     margin-right: 10px;
+    margin-left: 10px;
 }
+
+.arrow-down-left{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.dots{
+    margin-left: 10px;
+    margin-right: 15px;
+}
+
+.cloud{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.done-ring{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
