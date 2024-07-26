@@ -27,7 +27,7 @@ For this project, I recreated a functional prototype based on a Figma design pro
 
 ### Deploy
 
-Install dependencies and start ths node server
+Install dependencies and start the node server
 
 ```
 npm run prod
