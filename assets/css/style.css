@@ -1,8 +1,12 @@
+*{
+    margin: 0;
+}
 body{
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     margin: 0px;
     background-color: #ffffff;
+    color: rgb(31, 31, 31);
 }
 
 .app{
@@ -15,10 +19,8 @@ body{
     border: 1px dashed red;
 }
 .content{
-    /* border: 1px solid #000; */
     margin: 10px 0;
     padding: 10px 20%;
-    height: 3000px;
 }
 
 .content-header{
@@ -52,7 +54,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid #000; */
 }
 
 nav > ul {
@@ -80,10 +81,26 @@ nav img {
     color: #fff;
     padding: 3px 3px 0px 4px;
     border-radius: 5px;
-    /* border: none; */
     cursor: pointer;
     position: fixed;
     bottom: 20px;
     right: 20px;
 }
 
+.content-body-editable:focus-visible {
+    outline: none; 
+}
+
+.placeholder {
+    color: transparent;
+}
+
+.content-text:not(:empty)::after {
+    content: none;
+}
+
+.content-text.placeholder::after {
+    content: attr(data-placeholder);
+    color: #aaa;
+    pointer-events: none
+}

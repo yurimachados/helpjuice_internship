@@ -1,0 +1,88 @@
+#options-menu{
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 250px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+#options-menu > h3 {
+    color: #111620;
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom:2px;
+}
+
+#options-menu > p {
+    color: #989CA6;
+    font-size: 12px;
+    margin-left: 10px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+#options-menu > span {
+    color: #767a81;
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 10px;
+    margin-top: 2px;
+}
+
+#options-menu > span > span {
+    background-color: #3565A9;
+    border-radius: 3px;
+    color:#FFFFFF;
+    padding: 0px 3px;
+}
+
+#options-menu ul {
+    background-color: #F3F4F6;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#options-menu li {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+}
+
+#options-menu li:hover {
+    background-color: #E5E7EB;
+}
+
+#options-menu li img{
+    margin-right: 10px;
+}
+
+#options-menu li > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+
+#options-menu li > div > p {
+    color: #989CA6;
+    font-size: 11px;
+    margin: 0;
+}
+
+#options-menu li > div > h4 {
+    color: #111620;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.selected {
+    background-color: #1c4aa5;
+}
